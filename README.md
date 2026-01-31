@@ -3,6 +3,8 @@
 **Created by:** Keshuvardhan Vuddanti  
 **Purpose:** Full-stack task management application for organizing daily tasks  
 **Tech Stack:** Node.js, Express, MongoDB, HTML, CSS, JavaScript
+**GitHub:** [github.com/Keshuvardhan1](https://github.com/Keshuvardhan1)  
+**Live Demo:** [Task Manager](https://keshuvardhantaskmanager.netlify.app/)
 
 A full-stack task management application built with Node.js, Express, MongoDB, and vanilla JavaScript. Create, view, update, and delete tasks with a clean, responsive interface.
 
