@@ -1,4 +1,4 @@
-const API_URL = "https://task-manager-backend.onrender.com/api/tasks";
+const API_URL = "https://task-manager-backend-k6f5.onrender.com/api/tasks";
 
 let currentFilter = "all";
 let editingTaskId = null;
