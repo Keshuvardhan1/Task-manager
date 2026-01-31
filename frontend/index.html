@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>✨ Task Manager</h1>
+        <p>Stay organized and productive</p>
+      </header>
+
+      <section class="add-task-section">
+        <h2>Add New Task</h2>
+        <form id="taskForm">
+          <div class="form-group">
+            <label for="title">Task Title</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              required
+              maxlength="100"
+              placeholder="e.g., Complete project documentation"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+              id="description"
+              name="description"
+              required
+              maxlength="500"
+              placeholder="Add more details about this task..."
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select id="status" name="status">
+              <option value="pending">📋 Pending</option>
+              <option value="in-progress">⏳ In Progress</option>
+              <option value="completed">✅ Completed</option>
+            </select>
+          </div>
+
+          <div style="display: flex; gap: 1rem">
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              <span id="submitBtnText">Add Task</span>
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              id="cancelBtn"
+              style="display: none"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="filter-section">
+        <h2>Your Tasks</h2>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All Tasks</button>
+          <button class="filter-btn" data-filter="pending">Pending</button>
+          <button class="filter-btn" data-filter="in-progress">
+            In Progress
+          </button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+      </section>
+
+      <section class="task-list-section">
+        <div id="taskList" class="task-list">
+          <div class="loading">Loading tasks...</div>
+        </div>
+      </section>
+    </div>
+
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Task</h2>
+        <form id="editTaskForm">
+          <div class="form-group">
+            <label for="editTitle">Task Title</label>
+            <input
+              type="text"
+              id="editTitle"
+              name="title"
+              required
+              maxlength="100"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="editDescription">Description</label>
+            <textarea
+              id="editDescription"
+              name="description"
+              required
+              maxlength="500"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="editStatus">Status</label>
+            <select id="editStatus" name="status">
+              <option value="pending">📋 Pending</option>
+              <option value="in-progress">⏳ In Progress</option>
+              <option value="completed">✅ Completed</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Update Task</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

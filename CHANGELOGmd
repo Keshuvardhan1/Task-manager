@@ -1,0 +1,24 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [1.0.0] - 2025-02-01
+
+### Added
+- Initial release
+- Task CRUD operations (Create, Read, Update, Delete)
+- Filter tasks by status (Pending, In Progress, Completed)
+- Responsive design with unified CSS
+- MongoDB database integration
+- RESTful API with Express.js
+
+### Fixed
+- MongoDB connection string configuration
+- .env file setup for environment variables
+
+## Future Enhancements
+- [ ] User authentication
+- [ ] Due dates for tasks
+- [ ] Task categories/tags
+- [ ] Search functionality
+- [ ] Dark mode toggle
